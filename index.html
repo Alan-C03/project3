@@ -2,11 +2,31 @@
 layout: base
 title: Home
 ---
+<head>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
 
-<header>
-  <h1>{{ title }}</h1>
-</header>
+  <style>
+    .Container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
 
+    .Container div{
+    padding: 10px;
+    }
+  </style>
+</head>
+
+<div class = "Container" >
+{% for photo in photos7kmsoc3.media -%}
+<div>
+  <img src = {{photo.src.tiny}} alt = {{photo.alt}}> 
+</div>
+{% endfor -%}
+</div>
 <footer>
   <hr />
   <p>
