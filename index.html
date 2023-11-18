@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Home
+
 ---
 <head>
   <header>
@@ -23,7 +24,10 @@ title: Home
 <div class = "Container" >
 {% for photo in photos7kmsoc3.media -%}
 <div>
-  <img src = {{photo.src.tiny}} alt = {{photo.alt}}> 
+  
+  <a href = "/photos7kmsoc3/{{photo.id}}/index.html" >
+    <img src = {{photo.src.tiny}} alt = {{photo.alt}}>
+  </a>
 </div>
 {% endfor -%}
 </div>
